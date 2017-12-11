@@ -61,9 +61,9 @@
         <form id="article-form">
           <input placeholder="title" id="article-title" type="type" required>
           <textarea placeholder="body" name="" id="article-body" cols=
-            30 rows="10" required></textarea>
+            "30" rows="10" required></textarea>
             <input placeholder="author" id="article-author" type="type">
-            <input placeholder="url" id="article-url" type="url" pattern="">
+            <input placeholder="url" id="article-url" type="url" pattern="\w+?\.\w+@\w+\.\w+">
             <input placeholder="category" id="article-category" type="type">
             <lable for=""><input id="article-pubdate" type="checkbox">Published</lable>
         </form>
@@ -87,14 +87,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <!-- NOTE (stretch goal): Include script tags for 3rd party libraries to enable Markdown rendering and code syntax highlighting. Use the minified CDN. Keep in mind that if we want these features to render properly on our main blog page (index.html) that we'll need to add those scripts over there, too. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.7/marked.min.js"></script>
     <script src="/scripts/blogArticles.js"></script>
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
+      // DONE: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
-
+      articleView.initNewArticlePage();
       // COMMENT: What is this function doing? Why do we need it?
       // PUT YOUR RESPONSE HERE
     </script>
