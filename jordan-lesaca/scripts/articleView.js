@@ -80,13 +80,13 @@ articleView.initNewArticlePage = () => {
   $('.tab-content').show()
   // TODO: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
-  $('#article-export').hide
+  $('#article-export').hide()
   $('#article-json').on('focus', function(){
     this.select();
   });
 
   // DONE: Add an event handler to update the preview and the export field if any inputs change.
-  $('article-form').on('change', 'input, textarea', articleView.create)
+  $('#article-form').on('change', 'input, textarea', articleView.create)
 };
 
 articleView.create = () => {
@@ -97,12 +97,12 @@ articleView.create = () => {
 
   // DONE: Instantiate an article based on what's in the form fields:
   article = new Article({
-    author: $('article-author').val(),
-    authorUrl: $('article-url').val(),
-    title: $('article-title').val(),
-    category: $('article-category').val(),
-    body: $('article-body').val(),
-    publishedOn: $('article-pubdate:checked').length ? new Date() : null,
+    author: $('#article-author').val(),
+    authorUrl: $('#article-url').val(),
+    title: $('#article-title').val(),
+    category: $('#article-category').val(),
+    body: $('#article-body').val(),
+    publishedOn: $('#article-pubdate:checked').length ? new Date() : null,
   })
 
   // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
@@ -118,7 +118,7 @@ articleView.create = () => {
 // COMMENT: Where is this function called? Why?
 // PUT YOUR RESPONSE HERE
 articleView.initIndexPage = () => {
-  articles.forEach(article => $('#articles').append(article.toHtml()));
+  articles.forEach(article => $('#articles').append(article.toHtml()));  
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
