@@ -28,4 +28,4 @@ rawData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)))
 
 rawData.forEach(articleObject => articles.push(new Article(articleObject)))
 
-articles.forEach(article => $('#articles').append(article.toHtml()))
+// articles.forEach(article => $('#articles').append(article.toHtml()))
