@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="vendor/styles/default.css">
     <link rel="stylesheet" href="vendor/styles/railscasts.css">
 
-    <!-- TODO: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
+    <!-- DONE: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
     <script id="article-template" type="text/x-handlebars-template">
       <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
         <header>
@@ -65,7 +65,7 @@
             <input placeholder="author" id="article-author" type="type">
             <input placeholder="url" id="article-url" type="url" pattern="\w+?\.\w+@\w+\.\w+">
             <input placeholder="category" id="article-category" type="type">
-            <lable for=""><input id="article-pubdate" type="checkbox">Published</lable>
+            <label for=""><input id="article-pubdate" type="checkbox">Published</label>
         </form>
       </section>
 
@@ -97,7 +97,7 @@
       //  Hint: Look in articleView.js for a function that does this.
       articleView.initNewArticlePage();
       // COMMENT: What is this function doing? Why do we need it?
-      // PUT YOUR RESPONSE HERE
+      // It renders the preview when you call it here.This creates the content for new.html.
     </script>
   </body>
 </html>

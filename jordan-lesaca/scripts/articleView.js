@@ -74,11 +74,11 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// new.html to load the content there. 
 articleView.initNewArticlePage = () => {
   // DONE: Ensure the main .tab-content area is revealed. We might add more tabs later or otherwise edit the tab navigation.
   $('.tab-content').show()
-  // TODO: The new articles we create will be copy/pasted into our source data file.
+  // DONE: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
   $('#article-export').hide()
   $('#article-json').on('focus', function(){
@@ -105,7 +105,7 @@ articleView.create = () => {
     publishedOn: $('#article-pubdate:checked').length ? new Date() : null,
   })
 
-  // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
+  // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
   $('#articles').append(article.toHtml())
 
   // DONE: Activate the highlighting of any code blocks; look at the documentation for hljs to see how to do this by placing a callback function in the .each():
@@ -116,7 +116,7 @@ articleView.create = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// In index.html to render the content there using the script tag here. 
 articleView.initIndexPage = () => {
   articles.forEach(article => $('#articles').append(article.toHtml()));  
   articleView.populateFilters();
