@@ -20,6 +20,8 @@ set up form for user input
 added an event handler to update the preview and export field 
 finished TODOs 
 finished comments 
+deleted extra code from article.js- 11:58pm
+
 
 ## Credits and Collaborations
 <!-- Scott! -->
