@@ -21,6 +21,8 @@ added an event handler to update the preview and export field
 finished TODOs 
 finished comments 
 deleted extra code from article.js- 11:58pm
+I think I got rid of the line that made multiple previews. 12:07am
+
 
 
 ## Credits and Collaborations
