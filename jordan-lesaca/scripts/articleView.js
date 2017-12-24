@@ -93,7 +93,7 @@ articleView.create = () => {
   let article; 
   // DONE: Set up a variable to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
-  $('articles').empty()
+  $('#articles').empty()
 
   // DONE: Instantiate an article based on what's in the form fields:
   article = new Article({
@@ -118,7 +118,6 @@ articleView.create = () => {
 // COMMENT: Where is this function called? Why?
 // In index.html to render the content there using the script tag here. 
 articleView.initIndexPage = () => {
-  articles.forEach(article => $('#articles').append(article.toHtml()));  
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
